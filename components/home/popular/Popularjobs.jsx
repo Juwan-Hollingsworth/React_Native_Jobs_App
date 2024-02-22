@@ -34,7 +34,14 @@ const Popularjobs = () => {
         ) : error ? (
           <Text>Something went wrong</Text>
         ) : (
-          <FlatList />
+          <FlatList
+            // Render a list of items horizontally using FlatList
+            data={[1, 2, 3, 4, 5, 6, 7, 8]}
+            renderItem={({ item }) => <PopularjobCard item={item} />}
+            keyExtractor={(item) => item?.job_id}
+            contentContainerStyle={{ columnGap: SIZES.medium }}
+            horizontal
+          />
         )}
       </View>
     </View>
