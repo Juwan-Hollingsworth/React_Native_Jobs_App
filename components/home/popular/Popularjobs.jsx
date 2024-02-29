@@ -12,12 +12,19 @@ import styles from './popularjobs.style'
 import { COLORS, SIZES } from '../../../constants'
 import PopularjobCard from '../../common/cards/popular/PopularJobCard'
 import { isLoaded } from 'expo-font'
+import useFetch from '../../../hook/useFetch'
 
 const Popularjobs = () => {
   const router = useRouter()
   //loading spinner toggle
-  const isLoading = false
-  const error = false
+
+  const { data, isLoading, error } = useFetch('search', {
+    query: 'React developer',
+    num_pages: 1,
+  })
+
+  console.log(data)
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
