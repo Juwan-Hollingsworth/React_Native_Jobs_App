@@ -56,6 +56,7 @@ const Welcome = () => {
             <TouchableOpacity
               style={styles.tab(activeJobType, item)}
               onPress={() => {
+                // Set the active job type and navigate to the corresponding search page
                 setActiveJobType(item)
                 router.push(`/search/${item}`)
               }}
@@ -64,6 +65,7 @@ const Welcome = () => {
               <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
             </TouchableOpacity>
           )}
+          // extract key for each item in job array
           keyExtractor={(item) => item}
           contentContainerStyle={{ columnGap: SIZES.small }}
           horizontal
