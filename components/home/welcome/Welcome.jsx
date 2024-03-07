@@ -23,7 +23,7 @@ const Welcome = () => {
     <View>
       {/* First inner View component */}
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello Juwan</Text>
+        <Text style={styles.userName}>Hello Juwan,</Text>
         <Text style={styles.welcomeMessage}>Find your perfect job</Text>
       </View>
       {/* Second inner View component */}
